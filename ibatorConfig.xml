@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration>
+	<ibatorContext id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://172.16.25.51:3306/tyrannosaurus" userId="root"
+			password="root" />
+		<javaModelGenerator targetPackage="org.lg.model"
+			targetProject="Tyrannosaurus\src" />
+		<sqlMapGenerator targetPackage="sqlmap" targetProject="Tyrannosaurus" />
+		<daoGenerator targetPackage="org.lg.dao" targetProject="Tyrannosaurus"
+			type="GENERIC-CI" />
+		<table schema="tyrannosaurus" tableName="user" />
+		<table schema="tyrannosaurus" tableName="record" />
+	</ibatorContext>
+</ibatorConfiguration>
